@@ -1483,7 +1483,8 @@ ul.msg_list li:last-child {
     padding: 10px
 }
 ul.msg_list li a {
-    padding: 3px 5px !important
+    padding: 3px 5px !important;
+
 }
 ul.msg_list li a .image img {
     border-radius: 2px 2px 2px 2px;
@@ -3110,6 +3111,10 @@ ul.project_files li a i {
     border-top: 2px solid #555;
     border-left: 2px solid transparent;
     border-right: 2px solid transparent
+}
+.imagen{
+  height: 50px;
+  width: 50px
 }
 .thumbnail .image {
     height: 120px;

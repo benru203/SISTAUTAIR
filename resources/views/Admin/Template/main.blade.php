@@ -25,7 +25,9 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="/Imagenes/Usuarios/{{Auth::user()->foto}}" alt="..." class="img-circle profile_img">
+
+
+                <img src="{{ asset('Imagenes/Usuarios/Auth::user()->foto')}}" alt="..." class="img-circle profile_img">
                 </div>
                 <div class="profile_info">
                 <span>Bienvenido,</span>
@@ -50,30 +52,30 @@
                   </li>
                   <li><a><i class="fa fa-university"></i> Bloque <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index3.html">Listar</a></li>
-                      <li><a href="index.html">Registrar</a></li>
+                      <li><a href="{{route('Administracion.Bloque.index')}}">Listar</a></li>
+                      <li><a href="{{route('Administracion.Bloque.create')}}">Registrar</a></li>
 
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Aula <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index3.html">Listar</a></li>
-                      <li><a href="index.html">Registrar</a></li>
+                      <li><a href="{{route('Administracion.Aula.index')}}">Listar</a></li>
+                      <li><a href="{{route('Administracion.Aula.create')}}">Registrar</a></li>
 
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Aires <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index3.html">Listar</a></li>
-                      <li><a href="index.html">Registrar</a></li>
+                      <li><a href="{{route('Administracion.Aire.index')}}">Listar</a></li>
+                      <li><a href="{{route('Administracion.Aire.create')}}">Registrar</a></li>
 
                     </ul>
                   </li>
                   <li><a><i class="fa fa-calendar"></i> Horario <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index3.html">Listar</a></li>
-                      <li><a href="index.html">Registrar</a></li>
-                      
+                      <li><a href="{{route('Administracion.Horario.index')}}">Listar</a></li>
+                      <li><a href="{{route('Administracion.Horario.create')}}">Registrar</a></li>
+
                     </ul>
                   </li>
               </div>

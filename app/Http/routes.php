@@ -23,7 +23,38 @@ Route::group(['prefix'=>'Administracion','middleware'=>'auth'],function(){
 
 
   Route::resource('Usuario','UserController');
+  Route::get('Usuario/destroy/{id}',[
+		'uses'=>'UserController@destroy',
+		'as'=>'Administracion.Usuario.destroy'
+	]);
+
+
+  Route::resource('Bloque','BloqueController');
+  Route::get('Bloque/destroy/{id}',[
+		'uses'=>'BloqueController@destroy',
+		'as'=>'Administracion.Bloque.destroy'
+	]);
+
+  Route::resource('Aula','AulaController');
+  Route::get('Aula/destroy/{id}',[
+    'uses'=>'AulaController@destroy',
+    'as'=>'Administracion.Aula.destroy'
+  ]);
+
+  Route::resource('Aire','AireController');
+  Route::get('Aire/destroy/{id}',[
+    'uses'=>'AireController@destroy',
+    'as'=>'Administracion.Aire.destroy'
+  ]);
+
+
+Route::resource('Horario','HorarioController');
+Route::get('Horario/destroy/{id}',[
+  'uses'=>'HorarioController@destroy',
+  'as'=>'Administracion.Horario.destroy'
+]);
 });
+
 
 Route::get('auth/login',[
   'uses'=> 'Auth\AuthController@getLogin',

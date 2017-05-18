@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Aula extends Model
 {
     //
-    protected $table('aulas');
+    protected $table = 'aulas';
 
-    protected$fillable['nombre','bloque_id'];
+    protected$fillable = ['nombre','bloque_id'];
 
     public function bloque(){
       return $this->belongsTo('App\Bloque');
     }
 
     public function aire(){
-      return $table->hasOne('App\Aire')
+      return $table->hasOne('App\Aire');
     }
 
     public function horarios(){
